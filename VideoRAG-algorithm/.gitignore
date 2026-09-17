@@ -12,3 +12,10 @@ videorag/__pycache__/
 ehthumbs.db
 Thumbs.db
 Desktop.ini
+.venv
+.checkpoints
+.env
+.movies
+.movies/*
+.videorag-workdir
+*.mp4

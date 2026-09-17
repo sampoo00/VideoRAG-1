@@ -5,6 +5,14 @@ import warnings
 import multiprocessing
 import sys
 
+from dotenv import load_dotenv
+
+# .env 파일 로드
+load_dotenv()
+
+# 환경 변수 가져오기
+openai_api_key = os.getenv("OPENAI_API_KEY")
+
 warnings.filterwarnings("ignore")
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
@@ -16,7 +24,7 @@ args = parser.parse_args()
 sub_category = args.collection
 
 os.environ["CUDA_VISIBLE_DEVICES"] = args.cuda
-os.environ["OPENAI_API_KEY"] = ""
+# os.environ["OPENAI_API_KEY"] = ""
 
 from videorag._llm import *
 from videorag.videorag import VideoRAG, QueryParam

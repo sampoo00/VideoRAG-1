@@ -387,11 +387,11 @@ ollama_config = LLMConfig(
     embedding_func_max_async = 1,
     query_better_than_threshold = 0.2,
     best_model_func_raw = ollama_complete ,
-    best_model_name = "gemma2:latest", # need to be a solid instruct model
+    best_model_name = "gemma4:e4b", #gemma2:latest", # need to be a solid instruct model djkim
     best_model_max_token_size = 32768,
     best_model_max_async  = 1,
     cheap_model_func_raw = ollama_mini_complete,
-    cheap_model_name = "olmo2",
+    cheap_model_name = "qwen3.5:9b", #"olmo2", djkim
     cheap_model_max_token_size = 32768,
     cheap_model_max_async = 1
 )
